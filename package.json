@@ -1,0 +1,38 @@
+{
+  "name": "neon-strike",
+  "productName": "Neon Strike",
+  "version": "1.0.0",
+  "description": "Neon Strike - by Ash Developers",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64",
+    "build:dir": "electron-builder --win --x64 --dir"
+  },
+  "author": "Ash Developers",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.ashdevelopers.neon-strike",
+    "productName": "Neon Strike",
+    "files": [
+      "**/*",
+      "!node_modules/**",
+      "!dist/**",
+      "!build/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": null
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false
+    }
+  }
+}
+
